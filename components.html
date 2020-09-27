@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HW 08 components</title>
+        <meta charset = "utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+            	<nav>
+            		<div class="logo">
+            		<a href="index.html">Mylib</a>
+            		</div>
+            		<ul class="nav-list">
+            			<li class="nav-list-item">
+                            <a href="elements.html">elements</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="components.html" class="active">components</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="layouts.html">layouts</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="drafts.html">drafts</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="documentation.html">documentation</a>
+                        </li>
+            		</ul>
+            	</nav>
+            </header>
+            <main>
+            	<div class="sidebar">
+            		<ul class="sidebar-list">
+            			<li class="sidebar-list-item">
+            				<a href="#chevron_menu">chevron menu</a>
+            			</li>
+            			<li class="sidebar-list-item">
+            				<a href="#">dropdown menu</a>
+            			</li>
+            			<li class="sidebar-list-item">
+            				<a href="#">modal box</a>
+            			</li>
+            			<li class="sidebar-list-item">
+            				<a href="#">allerts</a>
+            			</li>
+            		</ul>
+            	</div>
+            	<div class="main-content">
+            		<h2 class="title" id="chevron_menu">Chevron menu</h2>
+            		<div class="information">
+            			<div class="i">
+            				<img src="img/info.png" alt="i">
+            			</div>
+            			<div class="info">
+            				<p>Possible to use on gradient background</p>
+							<p>Easy to use opacity for items background</p>
+							<p>Cross-browser</p>
+						</div>
+            		</div>
+                    <div class="menu gradient">
+                        <ul class="menu-list">
+                            <li class="menu-list-item">
+                                <a href="" class="menu-list-link">ABOUT</a>
+                            </li>
+                            <li class="menu-list-item">
+                                <a href="" class="menu-list-link">CAREERS</a>
+                            </li>
+                            <li class="menu-list-item">
+                                <a href="" class="menu-list-link">FAQ</a>
+                            </li>
+                            <li class="menu-list-item">
+                                <a href="" class="menu-list-link">contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class=html>
+                        <div class="html-code">
+                            <pre class="pre">
+&lt;div class="menu gradient"&gt;
+    &lt;ul class="menu-list"&gt;
+        &lt;li class="menu-list-item"&gt;
+            &lt;a href="" class="menu-list-link"&gt;ABOUT&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="menu-list-item"&gt;
+            &lt;a href="" class="menu-list-link"&gt;CAREERS&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="menu-list-item"&gt;
+            &lt;a href="" class="menu-list-link"&gt;FAQ&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="menu-list-item"&gt;
+            &lt;a href="" class="menu-list-link"&gt;contact&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    <div class="html-word">html</div>
+                    </div>
+
+                    <div class="css">
+                        <div class="css-code">
+                            <pre class="pre">
+.menu-list { 
+    text-align: right; 
+}
+.menu {
+    background: #000000;
+    margin: 0px 48px;
+    padding: 2px 60px;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 127.92%);
+}
+.menu-list-item {
+    display: inline-block;
+    vertical-align: top; 
+    background: #FFFFFF; 
+    position: relative;
+    margin: 0 25px 0 25px;
+}
+
+.menu-list-link {
+    font: 32px/37px Helvetica, Arial, sans-serif;
+    text-transform: uppercase; 
+    color: #000000;
+    text-decoration: none; 
+    padding: 30px 25px 29px 25px;
+    display: inline-block;
+    vertical-align: top; 
+}
+
+.menu-list-link:after {
+    content: "";
+    display: block; 
+    position: absolute; 
+    top:0;
+    right: -25px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 48px 0 48px 25px;
+    border-color: transparent transparent transparent #ffffff;
+}
+
+.menu-list-link:before {
+    content: "";
+    display: block; 
+    position: absolute; 
+    top:0;
+    left: -25px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 48px 0 48px 25px;
+    border-color: #ffffff transparent #ffffff transparent;
+}
+
+.menu-list-link:hover {
+    background: #CCCCCC;
+}
+
+.menu-list-link:hover:after {
+    border-color: transparent transparent transparent #CCCCCC;
+}
+
+.menu-list-link:hover:before {
+    border-color: #CCCCCC transparent #CCCCCC transparent;
+}
+
+.gradient .menu-list-link:hover:before {
+    border-color: RGBA(255, 255, 255, .7) transparent RGBA(255, 255, 255, .7) transparent;
+}
+
+.gradient .menu-list-link:hover:after {
+    border-color: transparent transparent transparent RGBA(255, 255, 255, .7);
+    }
+
+.gradient .menu-list-link:hover {
+    background: transparent;
+}
+
+.gradient .menu-list-link:hover {
+    background: transparent;
+}
+
+.gradient .menu-list-item:hover {
+    background: RGBA(255, 255, 255, .7);
+}</pre>
+                        </div>
+                <div class="css-word">css</div>            
+            	</div>  
+            </main>
+        </div>
+    </body>
+</html>
